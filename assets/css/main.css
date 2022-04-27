@@ -189,7 +189,9 @@ list-link.current {
     display: block;
 }
 /* Search */
-
+.search {
+    height: 2000rem;
+}
 /* Form JavaScript styles */
 
 /* Featured articles */
