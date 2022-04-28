@@ -229,17 +229,20 @@ list-link.current {
     display: inline-block;
     border: 2px solid var(--secondary-background-color);
     padding: 1.5rem;
+    color: var(--light-color-alt);
 }
 
 .form-input {
     border-right: none;
     width: 100%;
+    background-color: var(--primary-background-color);
 }
 
 .form-btn {
     margin-left: -.5rem;
     border-left: none;
     background-color: var(--secondary-background-color);
+    text-transform: uppercase;
     width: 8rem;
 }
 
@@ -255,6 +258,7 @@ list-link.current {
     border: 2px solid var(--secondary-background-color);
     width: 4rem;
     height: 4rem;
+    display: flex;
 }
 /* Form JavaScript styles */
 .search-form-container.activated {
@@ -284,10 +288,12 @@ list-link.current {
 }
 
 .headline {
+    background-color: #000;
     color: var(--light-color);
     font-size: 1rem;
     text-transform: uppercase;
     text-align: center;
+    letter-spacing: 1px;
     padding: .4rem;
     height: 100%;
 }
@@ -366,6 +372,10 @@ list-link.current {
     background-color: var(--hover-light-color);
 }
 
+.article:hover .article-title {
+    color: var(--hover-light-color);
+}
+
 .article-data {
     display: flex;
     align-items: center;
@@ -438,9 +448,48 @@ list-link.current {
     color: var(--light-color-alt);
 }
 /* Quick read */
+.section-title {
+    position: relative;
+    font-size: var(--font-size-md);
+    margin-bottom: 6rem;
+}
 
+.section-title::before {
+    content: attr(data-name);
+    font-size: var(--font-size-lg);
+    text-transform: uppercase;
+    opacity: .1;
+    position: absolute;
+    top: 1.5rem;
+    left: 2rem;
+}
+
+.article.swiper-slide {
+    height: 40rem;
+}
 /* Quick read - Swiper */
+.swiper-wrapper {
+    height: auto;
+}
 
+.swiper-controls {
+    width: 3.5rem;
+    height: 3.5rem;
+    background-color: var(--secondary-background-color);
+}
+
+.swiper-controls::after {
+    font-size: 1.6rem;
+    color: var(--light-color);
+}
+
+.swiper-pagination {
+    bottom: .5rem !important;
+}
+
+.swiper-pagination-bullet {
+    background-color: var(--light-color);
+}
 /* Older posts */
 
 /* Popular tags */
